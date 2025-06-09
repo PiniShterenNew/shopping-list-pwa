@@ -1,14 +1,11 @@
-'use client';
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuth } from '../../store/auth';
+import type { Metadata } from 'next';
+import { LogoutPage } from '@/components/auth/LogoutPage';
 
-export default function Logout() {
-  const router = useRouter();
-  const clear = useAuth((s) => s.clear);
-  useEffect(() => {
-    clear();
-    router.push('/');
-  }, [clear, router]);
-  return <p className="p-8">Logging out...</p>;
+export const metadata: Metadata = {
+  title: 'Logout | Shopping List App',
+  description: 'Logging out of your account',
+};
+
+export default function LogoutRoute() {
+  return <LogoutPage />;
 }
