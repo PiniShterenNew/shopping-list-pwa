@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "ts-node src/server/index.ts",
+    "test": "jest"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
